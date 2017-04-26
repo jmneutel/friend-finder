@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Friend Finder Survey</h1>
+            <h3>The greatest resource in the galaxy companionship!</h3>
+            <hr>
+            <a href="/">
+                <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> View friends</button>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Add your profile!</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" role="form" id="surveyForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Photo Link</label>
+                                <input type="text" class="form-control" id="photo">
+                            </div>
+                        </form>
+                        <p>Testing</p>
+                        <select name="q1" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q2" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q3" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q4" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q5" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q6" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q7" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q8" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q9" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <br>
+                        <select name="q10" form="surveyForm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Finished!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js " integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin=" anonymous "></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+    var arr = [];
+
+    $("#add-btn").on("click", function(event) {
+        event.preventDefault();
+        var surveyAnswers = {
+            routeName: $("#name").val().replace(/\s+/g, "").toLowerCase(),
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+
+                $('select[name=q1]').val(),
+                $('select[name=q2]').val(),
+                $('select[name=q3]').val(),
+                $('select[name=q4]').val(),
+                $('select[name=q5]').val(),
+                $('select[name=q6]').val(),
+                $('select[name=q7]').val(),
+                $('select[name=q8]').val(),
+                $('select[name=q9]').val(),
+                $('select[name=q10]').val()
+
+            ],
+        };
+
+        var total = (parseInt(surveyAnswers.scores[0]) + parseInt(surveyAnswers.scores[1]) + parseInt(surveyAnswers.scores[2]) + parseInt(surveyAnswers.scores[3]) + parseInt(surveyAnswers.scores[4]) + parseInt(surveyAnswers.scores[5]) + parseInt(surveyAnswers.scores[6]) + parseInt(surveyAnswers.scores[7]) + parseInt(surveyAnswers.scores[8]) + parseInt(surveyAnswers.scores[9]));
+
+        // console.log(total);
+        surveyAnswers["total"] = total;
+
+        function bubbleSort(int) {
+            var len = arr.length;
+            for (var i = len - 1; i >= 0; i--) {
+                for (var j = 1; j <= i; j++) {
+                    if (arr[j - 1] > arr[j]) {
+                        var temp = arr[j - 1];
+                        arr[j - 1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        };
+
+        
+        if (arr.length >= 1) {
+
+            bubbleSort(arr);
+            console.log(arr);
+
+            for (var i = 0; i < arr.length; i++) {
+                
+                var minDiff = Math.abs(total - arr[i]);
+
+                if (Math.abs(total - arr[i]) < minDiff) {
+                    var temp = arr[i];
+                    minDiff = Math.abs(total - arr[i]);
+                    console.log(arr[i]);
+                } 
+            }
+
+        }
+        
+        arr.push(total);
+        
+        console.log("This is min " + minDiff);
+        console.log("Total is " + total);
+        // console.log("This is your closest match " + temp);
+        console.log(arr);
+
+        // Question: What does this code do??
+        $.post("/api/new", surveyAnswers)
+            .done(function(data) {
+                console.log(data);
+                alert("Adding Information...");
+            });
+    });
+    </script>
+</body>
+
+</html>
