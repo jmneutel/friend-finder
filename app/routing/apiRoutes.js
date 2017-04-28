@@ -40,24 +40,29 @@ module.exports = function(app) {
         // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
         // It will do this by sending out the value "true" have a table
         if (friendData.length >= 1) {
-            friendData.forEach(function(user) {
+            
+            friendData.forEach(function(friend) {
+               
                 var difference = 0;
 
-                var databaseTotal = user.total;
-                var thisTotal = potentialFriend.total;
-                var differenceTemp = parseInt(databaseTotal) - parseInt(thisTotal);
-                difference += Math.abs(differenceTemp);
+                var differenceTemp = parseInt(friend.total) - parseInt(potentialFriend.total);
+                
+                difference = difference + Math.abs(differenceTemp);
 
                 overallDiff.push(difference);
 
             });
 
             var minDiff = Math.min.apply(Math, overallDiff);
+            
             for (var i = 0; i < overallDiff.length; i++) {
+                
                 if (overallDiff[i] === minDiff) {
+                 
                     potentialMatches.push(friendData[i]);
                 }
             }
+
             res.json(potentialMatches);
 
         }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Friend Finder App</title>
+    <title>Friend Finder Survey</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -42,6 +42,9 @@
                                 <label for="reserve-photo">Link to Photo Image</label>
                                 <input type="text" class="form-control" id="photo" required>
                             </div>
+                            <br>
+                            <p class="question-header"></p>
+                            <br>
                             <select data-placeholder="" class="chosen-select" id="q1">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -50,6 +53,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
+                            <p class="question-header"></p>
                             <br>
                             <select data-placeholder="" class="chosen-select" id="q2">
                                 <option value=""></option>
@@ -60,6 +65,8 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
+                            <p class="question-header"></p>
+                            <br>
                             <select data-placeholder="" class="chosen-select" id="q3">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -68,6 +75,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
+                            <p class="question-header"></p>
                             <br>
                             <select data-placeholder="" class="chosen-select" id="q4">
                                 <option value=""></option>
@@ -78,6 +87,8 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
+                            <p class="question-header"></p>
+                            <br>
                             <select data-placeholder="" class="chosen-select" id="q5">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -86,6 +97,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
+                            <p class="question-header"></p>
                             <br>
                             <select data-placeholder="" class="chosen-select" id="q6">
                                 <option value=""></option>
@@ -96,6 +109,8 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
+                            <p class="question-header"></p>
+                            <br>
                             <select data-placeholder="" class="chosen-select" id="q7">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -104,6 +119,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
+                            <p class="question-header"></p>
                             <br>
                             <select data-placeholder="" class="chosen-select" id="q8">
                                 <option value=""></option>
@@ -114,6 +131,8 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
+                            <p class="question-header"></p>
+                            <br>
                             <select data-placeholder="" class="chosen-select" id="q9">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -122,6 +141,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
+                            <p class="question-header"></p>
                             <br>
                             <select data-placeholder="" class="chosen-select" id="q10">
                                 <option value=""></option>
@@ -141,13 +162,12 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
+                <p><a href="/api/friends">API Friend List Link</a> | <a href="https://github.com/jmneutel/friend-finder">GitHub Repo</a></p>
             </div>
         </footer>
     </div>
     <!-- Modal -->
-    <!-- Result Modal -->
-    <div id="resultModal" class="modal fade" role="dialog">
+    <div id="results" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
             <!-- Modal content-->
             <div class="modal-content">
@@ -228,11 +248,9 @@
                 }
 
                 // Display the result modal.
-                $('#resultModal').modal();
+                $('#results').modal();
             });
-        });
-
-   
+    });
     </script>
 </body>
 
