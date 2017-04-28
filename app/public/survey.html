@@ -43,8 +43,9 @@
                                 <input type="text" class="form-control" id="photo" required>
                             </div>
                             <br>
-                            <p class="question-header"></p>
-                            <br>
+                            <p class="question-header">Question 1</p>
+                            <p class="actual-question">Your mind is always buzzing with unexplored ideas and plans.</p>
+
                             <select data-placeholder="" class="chosen-select" id="q1">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -54,8 +55,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 2</p>
+                            <p class="actual-question">Generally speaking, you rely more on your experience than your imagination.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q2">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -65,8 +68,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 3</p>
+                            <p class="actual-question">You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q3">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -76,8 +81,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 4</p>
+                            <p class="actual-question">You rarely do something just out of sheer curiosity.</p>
+                       
                             <select data-placeholder="" class="chosen-select" id="q4">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -87,8 +94,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 5</p>
+                            <p class="actual-question">People can rarely upset you.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q5">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -98,8 +107,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 6</p>
+                            <p class="actual-question">It is often difficult for you to relate to other people’s feelings.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q6">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -109,8 +120,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 7</p>
+                            <p class="actual-question">In a discussion, truth should be more important than people’s sensitivities.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q7">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -120,8 +133,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 8</p>
+                            <p class="actual-question">You rarely get carried away by fantasies and ideas.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q8">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -131,8 +146,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 9</p>
+                            <p class="actual-question">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q9">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -142,8 +159,10 @@
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
                             <br>
-                            <p class="question-header"></p>
                             <br>
+                            <p class="question-header">Question 10</p>
+                            <p class="actual-question">You feel more energetic after spending time with a group of people.</p>
+                            
                             <select data-placeholder="" class="chosen-select" id="q10">
                                 <option value=""></option>
                                 <option value="1">1 (Strongly Disagree)</option>
@@ -152,6 +171,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5 (Strongly Agree)</option>
                             </select>
+                            <br>
                             <br>
                             <br>
                             <button type="submit" class="btn btn-primary submit">Submit</button>
@@ -166,10 +186,10 @@
             </div>
         </footer>
     </div>
-    <!-- Modal -->
+
     <div id="results" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
-            <!-- Modal content-->
+
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -188,6 +208,24 @@
         </div>
     </div>
     </div>
+
+    <style type="text/css">
+        .question-header {
+
+            font-weight: 700;
+            color: black;
+            font-size: 24px;
+        }
+
+        .actual-question {
+
+            font-weight: 500;
+            color: black;
+            font-size: 18px;
+        }
+
+    </style>
+    
     <script type="text/javascript">
     // Used inspector to find that chosen library was used on demo
     // file:///Users/Jared/Downloads/chosen_v1.7.0%20(2)/options.html
@@ -239,15 +277,14 @@
 
                 if (data) {
 
-                    // The results are in array form. For each object, grab the name and URL.
                     data.forEach(function(details) {
                         $("#modal_name").text(details.name);
                         $("#modal_photo").attr("src", details.photo);
                     });
+
                     $('.modal-title').text('Your best match(es)!');
                 }
 
-                // Display the result modal.
                 $('#results').modal();
             });
     });

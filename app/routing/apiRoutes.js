@@ -37,8 +37,7 @@ module.exports = function(app) {
         var potentialFriend = req.body;
         var overallDiff = [];
         var potentialMatches = [];
-        // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        // It will do this by sending out the value "true" have a table
+   
         if (friendData.length >= 1) {
             
             friendData.forEach(function(friend) {
